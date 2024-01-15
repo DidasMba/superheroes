@@ -7,6 +7,10 @@ from models import db, Hero
 
 import os
 
+abs_path=os.getcwd()
+
+db_path=f'{abs_path}'
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
