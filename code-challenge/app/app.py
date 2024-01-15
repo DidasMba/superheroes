@@ -9,10 +9,10 @@ import os
 
 abs_path=os.getcwd()
 
-db_path=f'{abs_path}'
+db_path=f'{abs_path}/db/app.db'
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/app.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = db_path
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 migrate = Migrate(app, db)
