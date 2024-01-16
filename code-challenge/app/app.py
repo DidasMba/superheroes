@@ -26,7 +26,14 @@ def home():
     return ''
 
 @app.route('/add-dumy')
-def add-dumy
+def add_dumy():
+    hero=Hero(name='Didas Jojo',super_name='Crazy Ape')
+    db.session.add(hero)
+    db.session.commit()
+
+    return 'Hero Added'
+
 
 if __name__ == '__main__':
-    app.run(port=3000)
+    app.run(port=3000,debug=True)
+    
