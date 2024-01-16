@@ -25,6 +25,8 @@ db.init_app(app)
 def home():
     return ''
 
+@app.route('/add-dumy')
+def add-dumy
 
 if __name__ == '__main__':
     app.run(port=3000)
